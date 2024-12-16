@@ -10,11 +10,9 @@ export const Home = () => {
   }
   return (
     <div className={styles.cardWrapper}>
-      <Card title="welcome to Codershouse" icon="Emoji">
+      <Card title="welcome to AudioChat" icon="Emoji">
         <p className={styles.text}>
-          We’re working hard to get Codershouse ready for everyone! While we
-          wrap up the finishing youches, we’re adding people gradually to make
-          sure nothing breaks :
+        welcome to AudioChat application, where you can connect seamlessly through  audio chat. Stay tuned—exciting features are on the way!
         </p>
         <div>
           <Button onClick={startRegister} text="Let's Go"></Button>

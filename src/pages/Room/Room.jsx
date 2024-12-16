@@ -23,7 +23,6 @@ const Room = () => {
       const { data } = await getRoom({roomId,accessToken});
       setRoom((prev) => data);
     };
-
     fetchRoom();
   }, [roomId]);
 

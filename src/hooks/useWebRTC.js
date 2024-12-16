@@ -247,7 +247,6 @@ import { ACTIONS } from "../actions";
 import socketInit from "../socket";
 import freeice from "freeice";
 import { useStateWithCallback } from "./useStateWithCallback";
-
 export const useWebRTC = (roomId, user) => {
   const [clients, setClients] = useStateWithCallback([]);
   const audioElements = useRef({});
@@ -255,11 +254,9 @@ export const useWebRTC = (roomId, user) => {
   const socket = useRef(null);
   const localMediaStream = useRef(null);
   const clientsRef = useRef(null);
-
   const addNewClient = useCallback(
     (newClient, cb) => {
       const lookingFor = clients.find((client) => client.id === newClient.id);
-
       if (lookingFor === undefined) {
         setClients((existingClients) => [...existingClients, newClient], cb);
       }
